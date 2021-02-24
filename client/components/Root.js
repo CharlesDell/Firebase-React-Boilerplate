@@ -2,12 +2,14 @@ import React from 'react';
 import store from '../store';
 
 import { Provider } from 'react-redux';
-import { Router } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-export default function Main() {
+export default function Root() {
   return (
     <Provider store={store}>
-      <div>Hello from Main.jsx</div>
+      <Router>
+        <div>Hello from Root.js</div>
+      </Router>
     </Provider>
   );
 }
